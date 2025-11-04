@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonte do Google - Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Padrão de Caracteres -->
     <meta charset="UTF-8" />
+
+    <!-- Layout Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Meta Tags Essenciais -->
     <meta name="author" content="Priscila Lins Mrozinski" />
     <meta
       name="description"
-      content="Portifólio da Priscila Lins Mrozinski, desenvolvedora Full Stack, especializada em criar experiências digitais incríveis. Conheça meus projtetos e entre em contato."
+      content="Portifólio de Priscila Lins Mrozinski, desenvolvedora Full Stack, especializada em criar experiências digitais incríveis. Conheça meus projetos e entre em contato."
     />
     <meta name="robots" content="index, follow" />
 
     <!-- Favicon   -->
     <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
 
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
     <title>Portifólio da Priscila</title>
   </head>
+
   <body>
     <!-- Navbar / Menu -->
     <header class="flex menu_container">
-      <article class="menu_container">
+      <article class="menu_content">
         <div id="titulo">
           <a href="#">Portifólio</a>
         </div>
+
         <nav>
           <ul class="flex menu_list">
             <li><a href="#hero">Início</a></li>
@@ -37,19 +55,22 @@
     <!-- Área Principal do Site -->
     <main>
       <section id="hero" class="hero_container">
-        <article class="hero_container">
+        <article class="hero_content">
           <h4>👏 Olá, eu sou Priscila!</h4>
           <h1>Desenvolvedora Full Stack</h1>
           <p>Transformo ideias em códigos e crio experiências incríveis</p>
-          <div class="hero_buttons>">
+
+          <div class="hero_buttons">
             <a href="#contact" class="botao">Entre em Contato</a>
             <a href="#about" class="botao-outline">Saiba Mais</a>
           </div>
         </article>
+
         <figure class="hero_image">
           <img
             src="./assets/img/dev_woman.svg"
             alt="Ilustração com uma pessoa desenvolvedora escrevendo códigos."
+            class="ilustracao float-animation"
           />
         </figure>
       </section>
@@ -97,7 +118,7 @@
           <p>Sinta-se à vontade para entrar em contato comigo!</p>
           <div class="social_container">
             <a href="#" target="_blank" class="social_icon">
-              <img src="./assets/img/linkedin.svg" alt="Link para o Lindedin" />
+              <img src="./assets/img/linkedin.svg" alt="Link para o LinkedIn" />
             </a>
             <a href="#" target="_blank" class="social_icon">
               <img src="./assets/img/github.svg" alt="Link para o GitHub" />
@@ -107,6 +128,9 @@
                 src="./assets/img/instagram.svg"
                 alt="Link para o Instagram"
               />
+            </a>
+            <a href="#" target="_blank" class="social_icon">
+              <img src="./assets/img/facebook.svg" alt="Link para o Facebook" />
             </a>
           </div>
         </article>

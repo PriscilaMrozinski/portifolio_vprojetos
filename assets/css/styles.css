@@ -1,0 +1,290 @@
+/* Resetar todas as configurações originais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === VARIÁVEIS === */
+:root {
+  /* Cores */
+  --purple-50: #f4eaff;
+  --purple-100: #e9dcfa;
+  --purple-200: #cdb3f0;
+  --purple-300: #b186e5;
+  --purple-400: #9460db;
+  --purple-500: #6b36c8;
+  --purple-600: #5b2ca0;
+  --purple-700: #4c2177;
+  --purple-800: #441f88;
+  --purple-900: #2a0e4d;
+  --gray-100: #f5f5f5;
+  --gray-200: #e8e8e8;
+  --gray-400: #505861;
+  --black-800: #171717;
+  --white: #ffffff;
+  --error: #e63946;
+
+  /* Sombras */
+  --shadow-sm: 0 0.25rem 0.5rem #0000000d;
+  --shadow-md: 0 0.25rem 0.75rem #6b36c84d;
+  --shadow-lg: 0 0.5rem 1.5rem #6b36c833;
+  --shadow-focus: 0 0 0 0.25rem #6b36c81a;
+}
+
+/* Estilos Globais */
+
+html {
+  scroll-behavior: smooth; /* rolagem suave ao clicar em links */
+}
+
+body {
+  display: flex; /* deixa o layout flexivel */
+  flex-direction: column; /* configura o layout flexivel em colunas */
+  min-height: 100vh; /*ocupa altura navegador */
+  background-color: var(--white); /* define fundo do site branco */
+  color: var(
+    --black-800
+  ); /* var: chama a variavel de cores, define cor do texto preto suave */
+}
+
+main {
+  flex: 1; /* faz o main virar flex e elementos internos ocuparem todo o espaço disponivel do conatiner */
+}
+
+a,
+button {
+  cursor: pointer; /* muda o cursor para pointer(maozinha) ao passar o mouse sobre links */
+}
+
+/* Configurar os Botões de uma forma geral*/
+.botao,
+.botao-outline {
+  padding: 0.75rem 2rem; /*espaçamento interno*/
+  border-radius: 0.5rem; /*borda arredondada*/
+  font-size: 1rem; /*tamanho da fonte, ex.: 16px*/
+  font-weight: 600; /*peso da fonte, ex.: negrito*/
+  text-align: center; /*alinha o texto ao centro*/
+  transition: all 0.3s ease; /*faz uma transição de todas as cores de 0,3 segundos, sem cor para a cor que definir*/
+}
+
+/* Configurar os Botões de uma forma específica*/
+.botao {
+  border: none; /*remove a borda padrão do botão*/
+  color: var(--white); /*cor do texto branco*/
+  background-color: var(--purple-500); /*cor de fundo roxo médio*/
+}
+
+/* Efeito quando passa o mouse nos botoes */
+.botao:hover {
+  background-color: var(--purple-800);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.25rem); /*move o botão para cima*/
+}
+
+/* Configurar os Botões-Outline de uma forma específica*/
+.botao-outline {
+  border: 0.25rem solid var(--purple-500); /*borda roxa média*/
+  color: var(--purple-500); /*cor do texto roxo médio*/
+  background-color: transparent; /*fundo transparente*/
+}
+
+/* Efeito quando passa o mouse nos botoes-outline */
+.botao-outline:hover {
+  background-color: var(--purple-500);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.25rem); /*move o botão para cima*/
+}
+
+/* Configurando os Menus */
+
+.menu_container {
+  position: sticky; /* efeito dos elementos passarem por baixo dele */
+  top: 0; /* fixa o menu no topo */
+  width: 100%; /* ocupa toda a largura da tela */
+  height: 5rem; /* altura do menu */
+  background-color: var(--purple-800); /* cor de fundo branco */
+  border-bottom: 0.5rem solid var(--gray-200); /* borda inferior cinza média */
+  box-shadow: var(--shadow-sm); /* sombra média  */
+  z-index: 1000; /* garante que o menu fique acima de outros elementos, ou seja todos os elementos passam por baixo do menu */
+}
+
+.menu_content {
+  /* atenção se lá em cima está usando o flex-direction: column; -- nesse caso muda de horizontal para column - vertical*/
+  display: flex;
+  justify-content: space-between; /* como alinha os elementos nas horizontal, space-between: joga um de um lado, outro de outro lado e deixa espaço*/
+  align-items: center;
+  width: 70rem; /* largura máxima do conteudo do menu */
+  height: 100%; /* altura do menu */
+  padding: 0 1.5rem; /* espaçamento interno do menu, 0 em cima e em baixo, 1.5rem nas laterais */
+  margin: 0 auto; /* centraliza o conteudo do menu */
+}
+
+.menu_container a {
+  font-weight: 600;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.menu_container a:hover {
+  color: var(--purple-200);
+}
+
+#titulo a {
+  font-size: 1.5rem;
+  font-weight: 700; /* deixa a fonte bold */
+}
+
+.menu_list {
+  display: flex; /* deixa o menu tudo em linha, nao um em cima do outro */
+  list-style: none;
+  gap: 2rem; /* espaçamento entre os itens do menu */
+}
+
+.menu_list a {
+  padding: 0.5rem;
+}
+
+/* Configurar as Seções - Estilos Comuns */
+.hero_container,
+.about_container,
+.contact_container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  scroll-margin-top: 6rem; /* efeito de rolamento */
+}
+
+/* Seção Hero */
+
+.hero_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ilustracao {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 2rem;
+}
+
+/* ATIVIDADE COMPLETAR HERO (INÍCIO) E ABOUT (SOBRE MIM) */
+
+/* === SEÇÃO HERO (INÍCIO) === */
+.hero_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem; /* espaço entre o texto e a imagem */
+  padding: 6rem 1.5rem;
+}
+
+.hero_content {
+  flex: 1;
+}
+
+.hero_content h4 {
+  font-size: 1.25rem;
+  color: var(--purple-800);
+  margin-bottom: 1rem;
+}
+
+.hero_content h1 {
+  font-size: 2.5rem;
+  color: var(--black-800);
+  margin-bottom: 1rem;
+}
+
+.hero_content p {
+  font-size: 1.1rem;
+  color: var(--gray-400);
+  margin-bottom: 2rem;
+}
+
+.hero_buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Animação na ilustração */
+
+/* Primeiro Passo: criar o roteiro: */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* @keyframes, outros efeitos: shake (balança), pulse (aumenta e diminue), fade-in (aparece suavemente)*/
+/* a porcentagem: indica o momento da animação, 0% início, 50% meio, etc  */
+
+/* Segundo Passo: chamar a animação */
+.float-animation {
+  animation: float 3s ease infinite; /*animation: executa animaão -- infinite: a animação continua se movimentando */
+}
+
+/* === SEÇÃO ABOUT (SOBRE MIM) === */
+.about_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background-color: var(--gray-100);
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+}
+
+.about_image img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+}
+
+.about_content {
+  flex: 1;
+}
+
+.about_content h2 {
+  font-size: 2rem;
+  color: var(--purple-800);
+  margin-bottom: 1.5rem;
+}
+
+.about_content p {
+  font-size: 1rem;
+  color: var(--gray-400);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Estatísticas e botão GitHub */
+.about_stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--purple-800);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+}

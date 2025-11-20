@@ -38,7 +38,7 @@ async function getApiGithub(){
           <h2>Sobre mim</h2>
           <p>
             Apaixonada por tecnologia. Atualmente, mergulho nesse incrível universo da tecnologia e da programação.
-            Curso <span style="color: var(--magenta-800);">Desenvolvimento de Software Multiplataformas </span> na Fatec.  
+            Curso Desenvolvimento de Software Multiplataformas na Fatec.  
             Além disso, participo do Bootcamp Java Full Stack da Generation Brasil e 
             do Bootcamp de Análise de Dados com Python, promovido pela {Reprograma}.
           </p>
@@ -49,7 +49,7 @@ async function getApiGithub(){
           </p>
           <p>
           Já desenvolvi minissistemas utilizando o modelo Model-View-Controller, com Spring Boot, SQL, JPA/Hibernate, JUnit e Insomnia. 
-          No front-end, utilizando HTML, CSS, JavaScript, Bootstrap e React. Convido vocês a conhecerem meu <span style="color: var(--magenta-800);">GitHub</span> github.com/PriscilaMrozinski.
+          No front-end, utilizando HTML, CSS, JavaScript, Bootstrap e React. Convido vocês a conhecerem meu GitHub github.com/PriscilaMrozinski.
           Espero em breve contribuir com muitos projetos e seguir evoluindo junto à comunidade tech.
           </p>
 
@@ -131,3 +131,16 @@ formulario.addEventListener('submit', function(event){
 // Chamar a função getApiGithub () para buscar os dados no Github 
 getApiGithub();
 
+
+window.addEventListener('DOMContentLoaded', () => {
+  lottie.loadAnimation({
+    container: document.getElementById('animacao'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './assets/img/wave.json',
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  });
+});

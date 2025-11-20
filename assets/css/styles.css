@@ -16,23 +16,34 @@
   --magenta-200: #f1a2c8;
   --magenta-300: #e774a8;
   --magenta-400: #d94d8b;
-  --magenta-500: #9c0d54; /* cor principal da imagem */
+
+  --magenta-500: #9c0d54;
+  /* cor principal da imagem */
   --magenta-600: #850a49;
   --magenta-700: #6e083f;
   --magenta-800: #560633;
+
   --magenta-900: #3b0424;
   --gray-100: #f5f5f5;
   --gray-200: #e8e8e8;
-  --gray-400: #505861;
+  --gray-400: #dfdfdf;
+  --gray-400: #727373;
+  --gray-500: #484a4b;
   --black-800: #171717;
   --white: #ffffff;
   --error: #e63946;
+  --red: rgb(198, 2, 2);
 
   /* Sombras */
   --shadow-sm: 0 0.25rem 0.5rem #0000000d;
-  --shadow-md: 0 0.25rem 0.75rem #6b36c84d;
-  --shadow-lg: 0 0.5rem 1.5rem #6b36c833;
-  --shadow-focus: 0 0 0 0.25rem #6b36c81a;
+  --shadow-md: 0 0.25rem 0.75rem #c836364d;
+  --shadow-lg: 0 0.5rem 1.5rem #c8363633;
+  --shadow-focus: 0 0 0 0.25rem #c836361a;
+
+  /* Vermelho */
+
+
+
 }
 
 
@@ -40,58 +51,73 @@
 /* Estilos Globais */
 
 html {
-  scroll-behavior: smooth; /* rolagem suave ao clicar em links */
+  scroll-behavior: smooth;
+  /* rolagem suave ao clicar em links */
 }
 
 body {
-  display: flex; /* deixa o layout flexivel */
-  flex-direction: column; /* configura o layout flexivel em colunas */
-  min-height: 100vh; /*ocupa altura navegador */
-  background-color: var(--white); /* define fundo do site branco */
-  color: var(
-    --black-800
-  ); /* var: chama a variavel de cores, define cor do texto preto suave */
+  display: flex;
+  /* deixa o layout flexivel */
+  flex-direction: column;
+  /* configura o layout flexivel em colunas */
+  min-height: 100vh;
+  /*ocupa altura navegador */
+  background-color: var(--white);
+  /* define fundo do site branco */
+  color: var(--black-800);
+  /* var: chama a variavel de cores, define cor do texto preto suave */
 }
 
 main {
-  flex: 1; /* faz o main virar flex e elementos internos ocuparem todo o espaço disponivel do conatiner */
+  flex: 1;
+  /* faz o main virar flex e elementos internos ocuparem todo o espaço disponivel do conatiner */
 }
 
 a,
 button {
-  cursor: pointer; /* muda o cursor para pointer(maozinha) ao passar o mouse sobre links */
+  cursor: pointer;
+  /* muda o cursor para pointer(maozinha) ao passar o mouse sobre links */
 }
 
+/* BOTOES (VER GITHUB) */
 /* Configurar os Botões de uma forma geral*/
 .botao,
 .botao-outline {
-  padding: 0.75rem 2rem; /*espaçamento interno*/
-  border-radius: 0.5rem; /*borda arredondada*/
-  font-size: 1rem; /*tamanho da fonte, ex.: 16px*/
-  font-weight: 600; /*peso da fonte, ex.: negrito*/
-  text-align: center; /*alinha o texto ao centro*/
-  transition: all 0.3s ease; /*faz uma transição de todas as cores de 0,3 segundos, sem cor para a cor que definir*/
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 /* Configurar os Botões de uma forma específica*/
 .botao {
-  border: none; /*remove a borda padrão do botão*/
-  color: var(--white); /*cor do texto branco*/
-  background-color: var(--magenta-500); /*cor de fundo roxo médio*/
+  border: none;
+  /*remove a borda padrão do botão*/
+  color: var(--white);
+  /*cor do texto branco*/
+  background-color: var(--gray-400);
+  /*cor de fundo roxo médio*/
 }
 
 /* Efeito quando passa o mouse nos botoes */
 .botao:hover {
-  background-color: var(--magenta-800);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-0.25rem); /*move o botão para cima*/
+  /* background-color: var(--magenta-800); */
+  /* box-shadow: var(--shadow-md); */
+  transform: translateY(-0.25rem);
+  /*move o botão para cima*/
 }
 
 /* Configurar os Botões-Outline de uma forma específica*/
 .botao-outline {
-  border: 0.25rem solid var(--magenta-500); /*borda roxa média*/
-  color: var(--magenta-500); /*cor do texto roxo médio*/
-  background-color: transparent; /*fundo transparente*/
+  border: 0.25rem solid var(--magenta-500);
+  /*borda roxa média*/
+  color: var(--magenta-500);
+  /*cor do texto roxo médio*/
+  background-color: transparent;
+  /*fundo transparente*/
 }
 
 /* Efeito quando passa o mouse nos botoes-outline */
@@ -99,31 +125,50 @@ button {
   background-color: var(--magenta-500);
   color: var(--white);
   box-shadow: var(--shadow-md);
-  transform: translateY(-0.25rem); /*move o botão para cima*/
+  transform: translateY(-0.25rem);
+  /*move o botão para cima*/
 }
 
 /* Configurando os Menus */
 
 .menu_container {
-  position: sticky; /* efeito dos elementos passarem por baixo dele */
-  top: 0; /* fixa o menu no topo */
-  width: 100%; /* ocupa toda a largura da tela */
-  height: 8rem; /* altura do menu */
-  background-color: var(--magenta-700); /* cor de fundo branco */
-  border-bottom: 0.5rem solid var(--gray-200); /* borda inferior cinza média */
-  box-shadow: var(--shadow-sm); /* sombra média  */
-  z-index: 1000; /* garante que o menu fique acima de outros elementos, ou seja todos os elementos passam por baixo do menu */
+  position: sticky;
+  /* efeito dos elementos passarem por baixo dele */
+  top: 0;
+  /* fixa o menu no topo */
+  width: 100%;
+  /* ocupa toda a largura da tela */
+  height: 6.5rem;
+  /* altura do menu */
+  background-color: var(--gray-200);
+  /* cor de fundo branco */
+  border-bottom: 0.5rem solid var(--gray-200);
+  /* borda inferior cinza média */
+  box-shadow: var(--shadow-sm);
+  /* sombra média  */
+  z-index: 1000;
+  /* garante que o menu fique acima de outros elementos, ou seja todos os elementos passam por baixo do menu */
 }
+
+/* .menu_container {
+  padding: 4rem 0; /* geralmente melhor que height */
+
+
 
 .menu_content {
   /* atenção se lá em cima está usando o flex-direction: column; -- nesse caso muda de horizontal para column - vertical*/
   display: flex;
-  justify-content: space-between; /* como alinha os elementos nas horizontal, space-between: joga um de um lado, outro de outro lado e deixa espaço*/
+  justify-content: space-between;
+  /* como alinha os elementos nas horizontal, space-between: joga um de um lado, outro de outro lado e deixa espaço*/
   align-items: center;
-  width: 70rem; /* largura máxima do conteudo do menu */
-  height: 100%; /* altura do menu */
-  padding: 0 1.5rem; /* espaçamento interno do menu, 0 em cima e em baixo, 1.5rem nas laterais */
-  margin: 0 auto; /* centraliza o conteudo do menu */
+  width: 70rem;
+  /* largura máxima do conteudo do menu */
+  height: 100%;
+  /* altura do menu */
+  padding: 0 1.5rem;
+  /* espaçamento interno do menu, 0 em cima e em baixo, 1.5rem nas laterais */
+  margin: 0 auto;
+  /* centraliza o conteudo do menu */
 }
 
 .menu_container a {
@@ -132,19 +177,26 @@ button {
   transition: color 0.3s ease;
 }
 
+.menu_container a {
+  text-decoration: none;
+}
+
 .menu_container a:hover {
   color: var(--magenta-200);
 }
 
 #titulo a {
   font-size: 1.5rem;
-  font-weight: 700; /* deixa a fonte bold */
+  font-weight: 700;
+  /* deixa a fonte bold */
 }
 
 .menu_list {
-  display: flex; /* deixa o menu tudo em linha, nao um em cima do outro */
+  display: flex;
+  /* deixa o menu tudo em linha, nao um em cima do outro */
   list-style: none;
-  gap: 2rem; /* espaçamento entre os itens do menu */
+  gap: 2rem;
+  /* espaçamento entre os itens do menu */
 }
 
 .menu_list a {
@@ -154,13 +206,27 @@ button {
 /* Configurar as Seções - Estilos Comuns */
 .hero_container,
 .about_container,
-.contact_container {
+.contact_container,
+.projeto_container {
   max-width: 70rem;
+  /* largura do container  */
   margin: 0 auto;
-  padding: 3rem 1.5rem;
-  scroll-margin-top: 6rem; /* efeito de rolamento */
+  /* padding: 3rem 1.5rem; */
+  scroll-margin-top: 1rem;
+  /* efeito de rolamento */
 }
 
+/* faz voltar para o titulo */
+#about,
+#projeto,
+#contact,
+#hero {
+  scroll-margin-top: 100px;
+}
+
+#about {
+  padding: 7rem 0;
+}
 
 
 
@@ -171,11 +237,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .hero_container img {
-  max-width: 24rem; /* ajuste o tamanho da imagem */
+  max-width: 24rem;
+  /* ajuste o tamanho da imagem */
   width: 100%;
   height: auto;
 }
@@ -191,158 +258,183 @@ button {
 
 /* === HERO === */
 .hero_container {
-    min-height: calc(100vh - 5rem);
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
 }
 
 .hero_content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
 }
 
 .hero_content h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--magenta-500);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(198, 2, 2);
 }
 
 .hero_content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 3.5rem;
-    color: var(--black-800);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: var(--black-800);
 }
 
 .hero_content p {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
-    color: var(--gray-400);
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: var(--gray-400);
 }
 
 .hero_buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
+
+
 .hero_image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ilustracao {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 2rem;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 2rem;
 }
 
 /* Animação - Imagem Hero */
 @keyframes float {
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-1.25rem);
-    }
+  50% {
+    transform: translateY(-1.25rem);
+  }
 }
 
 .float-animation {
-    animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* === ABOUT === */
 .about_container {
-    margin: 4rem auto;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    background-color: var(--gray-200);
-    border-radius: 1rem;
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background-color: var(--gray-200);
+  border-radius: 1rem;
 
 }
 
 .about_image {
-    flex: 0 0 17.5rem;
+  flex: 0 0 17.5rem;
 }
 
 .about_image img {
-    width: 100%;
-    border: 0.375rem solid var(--magenta-500);
-    border-radius: 50%; /* arredonda completo, quadrado vira círculo */
-    box-shadow: var(--shadow-lg);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  border: 0.375rem solid var(--gray-500);
+  border-radius: 50%;
+  /* arredonda completo, quadrado vira círculo */
+  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 
 }
 
 .about_content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--magenta-800);
-   
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: rgb(198, 2, 2);
+
 
 }
 
 .about_content p {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
-    color: var(--gray-400);
-    margin-bottom: 1rem;
-    text-align: justify;          /* justifica o texto */
-    text-justify: inter-word;     /* distribui melhor o espaçamento */
-    max-width: 44rem; /* reduz a largura máxima */
-
-
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: var(--gray-400);
+  margin-bottom: 1rem;
+  text-align: justify;
+  /* justifica o texto */
+  text-justify: inter-word;
+  /* distribui melhor o espaçamento */
+  max-width: 44rem;
+  /* reduz a largura máxima */
 }
 
 .about_stats {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    align-items: center;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
 }
 
 .about_stats .botao {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .stat-item {
-    text-align: center;
+  text-align: center;
 }
 
 .stats-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .stats-wrapper .stat-number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--magenta-500);
-    margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--magenta-500);
+  margin-bottom: 0;
 }
 
 .stats-wrapper .stat-label {
-    font-size: 0.875rem;
-    color: var(--gray-400);
-    margin-bottom: 0;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: 0;
 }
+
+/* PROJETOS */
+
+/* <!--   <section id="creations" class="creations_container"> -->
+         <!--  <p class="creations_intro"> -->
+          <!--  <div class="creations_grid"> -->
+            <!--  <article class="creation_card"> -->
+              <!-- class="botao-outline" --> */
+
+
+/* <!-- <section id="projeto" class="projeto_container"> -->
+                <!-- <p class="projeto_introducao">  -->
+                  <!-- <div class="card_grid"> -->
+                    <!-- <article class="card"> -->
+                      <!-- class="botao-outline --> */
+
+
+
+
 
 
 /* CONTACT */
 
-.contact_container{
+.contact_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 4rem auto 2rem;
@@ -353,118 +445,122 @@ button {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--magenta-500);
+  color: rgb(198, 2, 2);
 }
 
-.contact_info p{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    color: var(--gray-400);
-    margin-bottom: 2rem;
+.contact_info p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--gray-400);
+  margin-bottom: 2rem;
 }
- 
-.social_container{
-    display: flex;
-    gap: 3rem;
+
+.social_container {
+  display: flex;
+  gap: 3rem;
 }
- 
-.social_icon{
-    width: 4rem;
-    height: 4rem;
-    padding: 0.75rem;
-    background-color: var(--gray-100);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
+
+.social_icon {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.75rem;
+  background-color: var(--gray-100);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
- 
-.social_icon:hover{
-    background-color: var(--magenta-600);
-    transform: translateY(-0.25rem);
-    box-shadow: var(--shadow-md);
+
+.social_icon:hover {
+  background-color: var(--red);
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-md);
 }
- 
-.social_icon img{
-    width: 100%;
-    filter: brightness(0) saturate(100%);
+
+.social_icon img {
+  width: 100%;
+  filter: brightness(0) saturate(100%);
 }
- 
-.social_icon:hover img{
-    filter: brightness(0) invert(100%);
+
+.social_icon:hover img {
+  filter: brightness(0) invert(100%);
 }
 
 /* FORMULÁRIO */
 
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
- 
-form label{
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--black-800);
+
+form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black-800);
 }
- 
+
 form input,
-textarea{
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 0.25rem solid var(--gray-200);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    background-color: var(--white);
-    transition: border-color 0.3s ease;
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 0.25rem solid var(--gray-200);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--white);
+  transition: border-color 0.3s ease;
 }
- 
+
 form input:focus,
-form textarea:focus{
-    border-color: var(--magenta-500);
-    box-shadow: var(--shadow-focus);
+form textarea:focus {
+  border-color: var(--magenta-500);
+  box-shadow: var(--shadow-focus);
 }
- 
-form textarea{
-    resize: vertical;
-    min-height: 7rem;
+
+form textarea {
+  resize: vertical;
+  min-height: 7rem;
 }
- 
-form span{
-    font-size: 0.75rem;
-    color: var(--error);
-    margin-top: -0.75rem;
-    font-weight: 500;
+
+form span {
+  font-size: 0.75rem;
+  color: var(--error);
+  margin-top: -0.75rem;
+  font-weight: 500;
 }
 
 /* SUCESS */
 
-.sucess_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-    padding: 2rem 1.5rem;
+.sucess_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2rem 1.5rem;
 }
 
 .sucess_content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem; /* controla o espaçamento entre ícone, textos e botão */
+  gap: 3rem;
+  /* controla o espaçamento entre ícone, textos e botão */
 }
 
 
 .sucess_icon {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center;
+  /* Centraliza horizontalmente */
   /* align-items: center;     Centraliza verticalmente */
   width: 6rem;
   height: 6rem;
-  background-color: var(--magenta-100);
+  background-color: whitesmoke;
   border-radius: 50%;
-  margin: 0 auto; /* garante centralização horizontal */
-  box-shadow: var(--shadow-md); /* faz a sobra */
+  margin: 0 auto;
+  /* garante centralização horizontal */
+  box-shadow: var(--shadow-md);
+  /* faz a sobra */
 }
 
 
@@ -474,28 +570,136 @@ footer {
   padding: 2.5rem;
   font-weight: 600;
   text-align: center;
-  background: linear-gradient(to right top, var(--magenta-500), var(--magenta-800)); /* começa com 500 e termina cor 800 */
-  color: var(--white);
+  /* background: linear-gradient(to right top, var(--gray-100), var(--gray-400)); */
+  /* começa com 500 e termina cor 800 */
+  background-color: rgb(223, 223, 223);
+  color: var(--gray-400);
   margin-top: auto;
-  
+
 }
 
 /* RESPONSIVIDADE */
 
 /* SMARTPHONES (ATÉ 490PX) */
 
-@media screen and (max-width: 490px) {
+/* @media screen and (max-width: 490px) {
+
   /* Menu */
- .Menu_content {
+/* .Menu_content {
     justify-content: center;
     padding: 0 1 rem;
   }
 
   .menu_list {
-    display: none;  
+    display: none;
   }
 
-  #titulo a{
+  #titulo a {
+    font-size: 1.25rem;
+    text-align: center;
+  }  */
+
+/* Hero */
+/* .hero_container {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+    min-height: auto;
+  }
+
+  .hero_content h4 {
+    font-size: 1rem;
+  }
+
+  .hero_content h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero_content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .hero_buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  } */
+
+/* About */
+/* .about_container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about_image {
+    max-width: 12rem;
+
+
+  }
+
+  .about_content h2 {
+    font-size: 1.75rem;
+
+  }
+
+  .about_content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+  }
+
+  .about_stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about_stats .botao {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+
+
+  } */
+/* FIM RESPONSIVIDADE */
+
+}
+
+/* .carousel-img {
+  width: 70%;
+  /* height: 90vh; */
+/* object-fit: cover; */
+/* object-position: center;
+} */
+
+/* .carousel-img {
+  width: 70%;
+  object-fit: cover;
+  object-position: center;
+} */
+
+/* ========================= */
+/* RESPONSIVIDADE           */
+/* ========================= */
+
+/* CELULARES (até 490px) */
+@media screen and (max-width: 490px) {
+
+  /* Menu */
+  .menu_content {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .menu_list {
+    display: none;
+    /* Esconde o menu principal */
+  }
+
+  #titulo a {
     font-size: 1.25rem;
     text-align: center;
   }
@@ -515,13 +719,13 @@ footer {
   .hero_content h1 {
     font-size: 2rem;
     line-height: 2.5rem;
-    }   
+  }
 
   .hero_content p {
-    font-size: 1rem;  
+    font-size: 1rem;
     line-height: 1.5rem;
   }
-  
+
   .hero_buttons {
     flex-direction: column;
     width: 100%;
@@ -536,19 +740,15 @@ footer {
 
   .about_image {
     max-width: 12rem;
-    
-    
   }
 
   .about_content h2 {
     font-size: 1.75rem;
-    
   }
 
   .about_content p {
     font-size: 1rem;
     line-height: 1.5rem;
-    
   }
 
   .about_stats {
@@ -561,8 +761,340 @@ footer {
     width: 100%;
     font-size: 0.9rem;
     padding: 0.5rem 1.25rem;
+  }
 
+  /* Contato */
+  .contact_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
 
+  .social_container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* TABLETS (até 768px) */
+@media screen and (max-width: 768px) {
+
+  /* Menu */
+  .menu_content {
+    width: 95%;
+    padding: 0 1rem;
+  }
+
+  .menu_list {
+    gap: 1.25rem;
+  }
+
+  #titulo a {
+    font-size: 1.4rem;
+  }
+
+  /* Hero */
+  .hero_container {
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero_content h4 {
+    font-size: 1.1rem;
+  }
+
+  .hero_content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .hero_content p {
+    font-size: 1.05rem;
+    line-height: 1.75rem;
+  }
+
+  .hero_buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* About */
+  .about_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .about_image {
+    max-width: 14rem;
+  }
+
+  .about_content h2 {
+    font-size: 2rem;
+  }
+
+  .about_content p {
+    font-size: 1.05rem;
+    line-height: 1.75rem;
+  }
+
+  .about_stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .about_stats .botao {
+    padding: 0.6rem 1.5rem;
+  }
+
+  /* Contato */
+  .contact_container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .social_container {
+    flex-wrap: wrap;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ajustes gerais de imagens e carrossel */
+img,
+.ilustracao,
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.espaco-topo {
+  margin-top: 3rem;
+}
+
+/* Esconder Lottie em celulares até 490px */
+@media screen and (max-width: 490px) {
+  .lottie-hero {
+    display: none;
+  }
+
+  /* Se quiser esconder também a hero_image inteira */
+  .hero_image {
+    display: none;
+  }
+}
+
+/* Opcional: esconder também em tablets até 768px */
+@media screen and (max-width: 768px) {
+  .lottie-hero {
+    display: none;
+  }
+}
+
+/* ===============================
+RESPONSIVIDADE - MOBILE FIRST
+=============================== */
+
+/* Aplica estilos para telas pequenas até 768px (tablets e celulares) */
+@media screen and (max-width: 768px) {
+
+  /* HERO */
+  .hero_container {
+    display: flex;
+    flex-direction: column;
+    /* Coloca conteúdo e animação em coluna */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero_content {
+    order: 1;
+    /* garante que o texto vem primeiro */
+    margin-bottom: 20px;
+  }
+
+  .hero_image {
+    order: 2;
+    /* animação depois do texto */
+    display: none;
+    /* esconde a animação em telas pequenas */
+  }
+
+  /* CONTACT - Formulário e Texto */
+  #contact {
+    display: flex;
+    flex-direction: column;
+    /* Coloca texto e formulário em coluna */
+    align-items: center;
+  }
+
+  .contact_info,
+  #formulario {
+    width: 100%;
+    /* ambos ocupam largura total */
+    max-width: 500px;
+    /* opcional: limita tamanho para não ficar gigante */
+    margin-bottom: 20px;
+  }
+
+  /* Botões do Hero */
+  .hero_buttons {
+    flex-direction: column;
+    gap: 10px;
   }
 
 }
+
+/* Para telas ainda menores, como celulares até 490px */
+@media screen and (max-width: 490px) {
+  .hero_content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero_content h4 {
+    font-size: 1.2rem;
+  }
+
+  .hero_content p {
+    font-size: 1rem;
+  }
+}
+
+
+/* FIM RESPONSIVIDADE ATUALIZADA */
+
+/* CARROSSEL */
+.carousel-control-prev {
+  left: 8%;
+  /* puxa a seta da esquerda em direção ao centro */
+
+}
+
+.carousel-control-next {
+  right: 8%;
+  /* puxa a seta da direita em direção ao centro */
+}
+
+.espaco-topo {
+  margin-top: 4rem;
+  /* escolha o valor */
+}
+
+
+/* ANIMAÇÃO LOTTIE */
+.hero_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ANIMAÇÃO LOTTIE */
+.lottie-hero {
+  width: 100%;
+  max-width: 900px;
+  /* ajuste conforme quiser */
+  height: 80vh;
+  /* controla altura (vh = % da altura da viewport) */
+  margin: 0 auto;
+}
+
+
+/* BOTOES MENU (INICIO, PROJETOS, SOBRE, CONTATO) */
+/* . Links do menu (botões de texto) */
+.menu_list .menu-link {
+  text-decoration: none;
+  color: #949393;
+  /* cor padrão do texto */
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease,
+    transform 0.3s ease;
+  /* animação */
+}
+
+/* BOTOES MENU (INICIO, PROJETOS, SOBRE, CONTATO) */
+.menu_list .menu-link:hover {
+  text-decoration: none;
+  color: red;
+  transform: scale(1.15);
+  /* aumenta 15% */
+}
+
+bg-escuro-sutil {
+  background-color: #d6d6d6 !important;
+}
+
+*/
+/* BOTÃO MAGENTA — Modo Claro */
+/* .botao-magenta {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--magenta-800);
+  border: 2px solid transparent;
+  transition: 0.25s ease;
+} */
+
+/* Link dentro do botão */
+/* .botao-magenta a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+/* BOTOES MENU (INICIO, PROJETOS, SOBRE, CONTATO) */
+/* HOVER (modo claro) */
+.botao-magenta:hover {
+  background-color: transparent;
+  /* color: var(--magenta-800); */
+  /* border-color: var(--magenta-800); */
+  transform: scale(1.05);
+}
+
+
+/* ATIVO (clicando) */
+/* .botao-magenta:active {
+  transform: scale(0.97);
+}
+
+/* BOTÃO MAGENTA — Modo Escuro */
+/* [data-theme="dark"] .botao-magenta {
+  background-color: var(--magenta-400);
+  color: #1a1a1a;
+} */
+
+/* [data-theme="dark"] .botao-magenta:hover {
+  background-color: transparent;
+  color: var(--magenta-400);
+  border-color: var(--magenta-400);
+} */
+
+/* Remove espaçamentos e deixa o menu lado a lado */
+.menu_list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  /* espaçamento entre as opções */
+  margin: 0;
+  padding: 0;
+}
+
+/*

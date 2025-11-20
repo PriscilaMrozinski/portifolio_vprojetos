@@ -412,25 +412,6 @@ button {
   margin-bottom: 0;
 }
 
-/* PROJETOS */
-
-/* <!--   <section id="creations" class="creations_container"> -->
-         <!--  <p class="creations_intro"> -->
-          <!--  <div class="creations_grid"> -->
-            <!--  <article class="creation_card"> -->
-              <!-- class="botao-outline" --> */
-
-
-/* <!-- <section id="projeto" class="projeto_container"> -->
-                <!-- <p class="projeto_introducao">  -->
-                  <!-- <div class="card_grid"> -->
-                    <!-- <article class="card"> -->
-                      <!-- class="botao-outline --> */
-
-
-
-
-
 
 /* CONTACT */
 
@@ -578,107 +559,6 @@ footer {
 
 }
 
-/* RESPONSIVIDADE */
-
-/* SMARTPHONES (ATÉ 490PX) */
-
-/* @media screen and (max-width: 490px) {
-
-  /* Menu */
-/* .Menu_content {
-    justify-content: center;
-    padding: 0 1 rem;
-  }
-
-  .menu_list {
-    display: none;
-  }
-
-  #titulo a {
-    font-size: 1.25rem;
-    text-align: center;
-  }  */
-
-/* Hero */
-/* .hero_container {
-    flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 1.5rem 1rem;
-    min-height: auto;
-  }
-
-  .hero_content h4 {
-    font-size: 1rem;
-  }
-
-  .hero_content h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
-  .hero_content p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .hero_buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.75rem;
-  } */
-
-/* About */
-/* .about_container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .about_image {
-    max-width: 12rem;
-
-
-  }
-
-  .about_content h2 {
-    font-size: 1.75rem;
-
-  }
-
-  .about_content p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-
-  }
-
-  .about_stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .about_stats .botao {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 0.5rem 1.25rem;
-
-
-  } */
-/* FIM RESPONSIVIDADE */
-
-}
-
-/* .carousel-img {
-  width: 70%;
-  /* height: 90vh; */
-/* object-fit: cover; */
-/* object-position: center;
-} */
-
-/* .carousel-img {
-  width: 70%;
-  object-fit: cover;
-  object-position: center;
-} */
 
 /* ========================= */
 /* RESPONSIVIDADE           */
@@ -1035,30 +915,13 @@ RESPONSIVIDADE - MOBILE FIRST
   /* aumenta 15% */
 }
 
+
+
 bg-escuro-sutil {
   background-color: #d6d6d6 !important;
 }
 
-*/
-/* BOTÃO MAGENTA — Modo Claro */
-/* .botao-magenta {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  background-color: var(--magenta-800);
-  border: 2px solid transparent;
-  transition: 0.25s ease;
-} */
 
-/* Link dentro do botão */
-/* .botao-magenta a {
-  color: inherit;
-  text-decoration: none;
-} */
 
 /* BOTOES MENU (INICIO, PROJETOS, SOBRE, CONTATO) */
 /* HOVER (modo claro) */
@@ -1069,23 +932,11 @@ bg-escuro-sutil {
   transform: scale(1.05);
 }
 
-
-/* ATIVO (clicando) */
-/* .botao-magenta:active {
-  transform: scale(0.97);
+body.sucess-page .menu_list {
+  transform: scale(1.05);
 }
 
-/* BOTÃO MAGENTA — Modo Escuro */
-/* [data-theme="dark"] .botao-magenta {
-  background-color: var(--magenta-400);
-  color: #1a1a1a;
-} */
 
-/* [data-theme="dark"] .botao-magenta:hover {
-  background-color: transparent;
-  color: var(--magenta-400);
-  border-color: var(--magenta-400);
-} */
 
 /* Remove espaçamentos e deixa o menu lado a lado */
 .menu_list {

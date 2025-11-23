@@ -11,19 +11,6 @@
 /* === VARIÁVEIS === */
 :root {
   /* Cores */
-  --magenta-50: #fdeaf3;
-  --magenta-100: #f9d1e4;
-  --magenta-200: #f1a2c8;
-  --magenta-300: #e774a8;
-  --magenta-400: #d94d8b;
-
-  --magenta-500: #9c0d54;
-  /* cor principal da imagem */
-  --magenta-600: #850a49;
-  --magenta-700: #6e083f;
-  --magenta-800: #560633;
-
-  --magenta-900: #3b0424;
   --gray-100: #f5f5f5;
   --gray-200: #e8e8e8;
   --gray-400: #dfdfdf;
@@ -39,11 +26,6 @@
   --shadow-md: 0 0.25rem 0.75rem #c836364d;
   --shadow-lg: 0 0.5rem 1.5rem #c8363633;
   --shadow-focus: 0 0 0 0.25rem #c836361a;
-
-  /* Vermelho */
-
-
-
 }
 
 
@@ -360,8 +342,6 @@ button {
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: rgb(198, 2, 2);
-
-
 }
 
 .about_content p {
@@ -584,6 +564,21 @@ footer {
     text-align: center;
   }
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ilustracao {
+    max-width: 100%;
+  }
+
+  .carousel-inner img {
+    max-width: 120%;
+    /* SOMENTE o carrossel aumenta */
+    height: auto;
+  }
+
   /* Hero */
   .hero_container {
     flex-direction: column-reverse;
@@ -615,33 +610,43 @@ footer {
   /* About */
   .about_container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+
   }
 
   .about_image {
     max-width: 12rem;
+    padding: 2rem;
   }
 
   .about_content h2 {
-    font-size: 1.75rem;
+    font-size: 1.50rem;
+    padding: 2rem;
   }
 
   .about_content p {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.25rem;
+    padding: 2rem;
   }
 
   .about_stats {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    
+
   }
 
   .about_stats .botao {
     width: 100%;
     font-size: 0.9rem;
-    padding: 0.5rem 1.25rem;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+
   }
+
+
 
   /* Contato */
   .contact_container {
@@ -690,7 +695,7 @@ footer {
   }
 
   .hero_content p {
-    font-size: 1.05rem;
+    font-size: 0.75rem;
     line-height: 1.75rem;
   }
 
@@ -705,20 +710,23 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .about_image {
     max-width: 14rem;
+    padding: 2rem;
   }
 
   .about_content h2 {
     font-size: 2rem;
+    padding: 2rem;
   }
 
   .about_content p {
-    font-size: 1.05rem;
+    font-size: 0.75rem;
     line-height: 1.75rem;
+    padding: 2rem;
   }
 
   .about_stats {
@@ -749,10 +757,19 @@ footer {
 }
 
 /* Ajustes gerais de imagens e carrossel */
-img,
-.ilustracao,
-.carousel-inner img {
+
+img {
   max-width: 100%;
+  height: auto;
+}
+
+.ilustracao {
+  max-width: 100%;
+}
+
+.carousel-inner img {
+  max-width: 120%;
+  /* SOMENTE o carrossel aumenta */
   height: auto;
 }
 
@@ -785,7 +802,7 @@ img,
 }
 
 /* ===============================
-RESPONSIVIDADE - MOBILE FIRST
+RESPONSIVIDADE
 =============================== */
 
 /* Aplica estilos para telas pequenas até 768px (tablets e celulares) */

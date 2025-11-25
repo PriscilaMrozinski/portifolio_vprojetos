@@ -16,7 +16,7 @@ Este é o repositório do meu site portfólio pessoal, desenvolvido com HTML, CS
 <br />
 
 - **HTML**: Estrutura de conteúdo e marcação do site.
-- **CSS**: Estilização e layout das páginas.
+- **CSS e Bootstrap**: Estilização e layout das páginas.
 - **JavaScript**: Funcionalidades e interatividade do site.
 
 <br />
